@@ -29,6 +29,8 @@ public class PaymentsUtil {
     JSONObject parameters = new JSONObject();
     parameters.put("allowedAuthMethods", new JSONArray(allowedCardAuthMethods));
     parameters.put("allowedCardNetworks", new JSONArray(allowedCardNetworks));
+    parameters.put("billingAddressRequired", true);
+    parameters.put("billingAddressParameters", new JSONObject().put("format", "FULL"));
 
     cardPaymentMethod.put("parameters", parameters);
 
